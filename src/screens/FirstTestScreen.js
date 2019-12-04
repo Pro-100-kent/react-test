@@ -5,7 +5,7 @@ export default class FirstTestScreen extends Component {
   render() {
     return (
       <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-        <Text>Салют, страна!</Text>
+        <Text>Салют!</Text>
       </View>
     );
   }
