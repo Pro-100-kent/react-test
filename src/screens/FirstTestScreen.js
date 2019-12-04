@@ -4,8 +4,10 @@ import {Text, View} from 'react-native';
 export default class FirstTestScreen extends Component {
   render() {
     return (
-      <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-        <Text>Салют!</Text>
+      <View style={{flex: 6, justifyContent: 'flex-start', alignItems: 'flex-start',}}>
+        <View style={{flex: 1.5, height: 50, backgroundColor: 'red', alignSelf: 'stretch'}} />
+        <View style={{flex: 2, height: 50, backgroundColor: 'orange', alignSelf: 'stretch'}} />
+        <View style={{flex: 2.5, height: 50, backgroundColor: 'purple', alignSelf: 'stretch'}}/>
       </View>
     );
   }
