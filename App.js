@@ -1,13 +1,15 @@
 import {createAppContainer} from 'react-navigation';
 import {createStackNavigator} from 'react-navigation-stack';
 import FirstTestScreen from './src/screens/FirstTestScreen';
+import SecondTestScreen from './src/screens/SecondTestScreen';
 
 const navigator = createStackNavigator(
   {
-    Test: FirstTestScreen,
+    FirstTest: FirstTestScreen,
+    SecondTest: SecondTestScreen,
   },
   {
-    initialRouteName: 'Test',
+    initialRouteName: 'SecondTest',
   },
 );
 
