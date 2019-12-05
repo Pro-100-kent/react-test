@@ -1,13 +1,31 @@
 import React, {Component} from 'react';
-import {Text, View} from 'react-native';
+import {Text, View, StyleSheet} from 'react-native';
 
 export default class InstaTestScreen extends Component {
     render() {
         return (
-            <View style={{flex: 10, justifyContent: 'flex-start', alignItems: 'flex-start',}}>
-                <View style={{backgroundColor: 'red', flex: 10, alignSelf: 'stretch', margin: 8}} />
-                <View style={{height: 50, backgroundColor: 'purple', alignSelf: 'stretch', margin: 18 }} />
+            <View style={styles.mainContainer}>
+                <View style={styles.actionsContanier} />
+                <View style={styles.listContainer} />
             </View>
         );
     }
 }
+
+const styles = StyleSheet.create({
+    mainContainer: {
+        flex: 1,
+        justifyContent: 'flex-start',
+        alignItems: 'flex-start',
+    },
+    listContainer: {
+        backgroundColor: 'orange',
+        flex: 1,
+        alignSelf: 'stretch',
+    },
+    actionsContanier: {
+        height: 75,
+        alignSelf: 'stretch',
+        
+    },
+});
