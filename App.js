@@ -3,15 +3,17 @@ import {createStackNavigator} from 'react-navigation-stack';
 import FirstTestScreen from './src/screens/FirstTestScreen';
 import SecondTestScreen from './src/screens/SecondTestScreen';
 import InstaTestScreen from './src/screens/InstaTestScreen';
+import DeliveryTestScreen from './src/screens/DeliveryTestScreen';
 
 const navigator = createStackNavigator(
   {
     FirstTest: FirstTestScreen,
     SecondTest: SecondTestScreen,
     InstaTest: InstaTestScreen,
+    DeliveryTest: DeliveryTestScreen,
   },
   {
-    initialRouteName: 'InstaTest',
+    initialRouteName: 'DeliveryTest',
   },
 );
 
