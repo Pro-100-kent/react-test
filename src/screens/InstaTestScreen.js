@@ -33,6 +33,7 @@ const styles = StyleSheet.create({
     alignSelf: 'stretch',
     borderBottomWidth: 3,
     borderBottomColor: 'gray',
+    flexDirection: 'row',
   },
   photoButtonContainer: {
     backgroundColor: 'black',
@@ -40,7 +41,25 @@ const styles = StyleSheet.create({
     width: 45,
     margin: 15,
   },
-  titleContainer: {},
-  bestVideosButtonContainer: {},
-  sendMessageButtonContainer: {},
+  titleContainer: {
+    backgroundColor: 'red',
+    height: 45,
+    flex: 1,
+    marginTop: 15,
+    marginBottom: 15,
+  },
+  bestVideosButtonContainer: {
+    backgroundColor: 'green',
+    height: 45,
+    width: 45,
+    margin: 15,
+  },
+  sendMessageButtonContainer: {
+    backgroundColor: 'purple',
+    height: 45,
+    width: 45,
+    marginRight: 15,
+    marginTop: 15,
+    marginBottom: 15,
+  },
 });
