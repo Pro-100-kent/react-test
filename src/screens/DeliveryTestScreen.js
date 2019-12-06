@@ -7,13 +7,17 @@ export default class DeliveryTestScreen extends Component {
     const deliveryList = [
       {restName: 'МакДоналдс', foodType: 'Фастфуд', photo: 'mcd.jpg'},
       {restName: 'БургерКинг', foodType: 'Фастфуд', photo: 'bk.jpg'},
-      {restName: 'ProntoPizza',
+      {
+        restName: 'ProntoPizza',
         foodType: 'Итальянская Кухня',
-        photo: 'pronto.jpg'},
-      {restName: 'Шаурма-на-УгляхЪ',
+        photo: 'pronto.jpg',
+      },
+      {
+        restName: 'Шаурма-на-УгляхЪ',
         foodType: 'Всемирная Кухня',
-        photo: 'schava.jpg'},
-        {restName: 'БургерКинг', foodType: 'Фастфуд', photo: 'bk.jpg'},
+        photo: 'schava.jpg',
+      },
+      {restName: 'БургерКинг', foodType: 'Фастфуд', photo: 'bk.jpg'},
     ];
 
     return (
@@ -27,7 +31,7 @@ export default class DeliveryTestScreen extends Component {
         <View style={styles.listContainer}>
           <FlatList
             data={deliveryList}
-            renderItem={({item}) => <DeliveryListItem />}
+            renderItem={({item}) => <DeliveryListItem listItem={item} />}
           />
         </View>
       </View>
