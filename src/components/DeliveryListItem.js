@@ -14,7 +14,10 @@ const styles = StyleSheet.create({
     mainContainer: {
         backgroundColor: 'gold',
         height: 115,
-        width: 300,
+        alignSelf: 'stretch',
+        marginTop: 15,
+        marginLeft: 15,
+        marginRight: 15,
     },
 });
 

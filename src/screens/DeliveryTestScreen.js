@@ -4,6 +4,18 @@ import DeliveryListItem from '../components/DeliveryListItem';
 
 export default class DeliveryTestScreen extends Component {
   render() {
+    const deliveryList = [
+      {restName: 'МакДоналдс', foodType: 'Фастфуд', photo: 'mcd.jpg'},
+      {restName: 'БургерКинг', foodType: 'Фастфуд', photo: 'bk.jpg'},
+      {restName: 'ProntoPizza',
+        foodType: 'Итальянская Кухня',
+        photo: 'pronto.jpg'},
+      {restName: 'Шаурма-на-УгляхЪ',
+        foodType: 'Всемирная Кухня',
+        photo: 'schava.jpg'},
+        {restName: 'БургерКинг', foodType: 'Фастфуд', photo: 'bk.jpg'},
+    ];
+
     return (
       <View style={styles.mainContainer}>
         <View style={styles.actionsContainer}>
@@ -13,7 +25,10 @@ export default class DeliveryTestScreen extends Component {
           <View style={styles.sendMessageButtonContainer} />
         </View>
         <View style={styles.listContainer}>
-                  
+          <FlatList
+            data={deliveryList}
+            renderItem={({item}) => <DeliveryListItem />}
+          />
         </View>
       </View>
     );
@@ -27,7 +42,6 @@ const styles = StyleSheet.create({
     alignItems: 'flex-start',
   },
   listContainer: {
-    backgroundColor: 'blue',
     flex: 1,
     alignSelf: 'stretch',
   },
