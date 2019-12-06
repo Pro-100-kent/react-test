@@ -1,23 +1,24 @@
 import React, {Component} from 'react';
 import {Text, View, StyleSheet, FlatList} from 'react-native';
 import DeliveryListItem from '../components/DeliveryListItem';
+import {images} from '../assets';
 
 export default class DeliveryTestScreen extends Component {
   render() {
     const deliveryList = [
-      {restName: 'МакДоналдс', foodType: 'Фастфуд', photo: 'mcd.jpg'},
-      {restName: 'БургерКинг', foodType: 'Фастфуд', photo: 'bk.jpg'},
+      {restName: 'МакДоналдс', foodType: 'Фастфуд', photo: images.maccoin},
+      {restName: 'БургерКинг', foodType: 'Фастфуд', photo: images.king},
       {
         restName: 'ProntoPizza',
         foodType: 'Итальянская Кухня',
-        photo: 'pronto.jpg',
+        photo: images.pizza,
       },
       {
         restName: 'Шаурма-на-УгляхЪ',
         foodType: 'Всемирная Кухня',
-        photo: 'schava.jpg',
+        photo: images.kot,
       },
-      {restName: 'БургерКинг', foodType: 'Фастфуд', photo: 'bk.jpg'},
+      {restName: 'БургерКинг', foodType: 'Фастфуд', photo: images.king},
     ];
 
     return (
