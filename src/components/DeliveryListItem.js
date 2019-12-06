@@ -8,7 +8,11 @@ export default class DeliveryListItem extends Component {
     return (
       <View style={styles.mainContainer}>
         <View style={styles.photoContainer}>
-          <Image style={styles.photo} source={this.props.listItem.photo} />
+          <Image
+            style={styles.photo}
+            source={this.props.listItem.photo}
+            resizeMode="cover"
+          />
         </View>
         <View style={styles.footerContainer} />
       </View>
@@ -31,7 +35,7 @@ const styles = StyleSheet.create({
     marginRight: 15,
   },
   photoContainer: {
-    height: 70,
+    height: 150,
     alignSelf: 'stretch',
   },
   footerContainer: {
