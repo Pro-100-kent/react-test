@@ -16,11 +16,22 @@ export default class DeliveryListItem extends Component {
         </View>
         <View style={styles.footerContainer}>
           <View style={styles.descriptionContainer}>
-              <Text>
-                Беконайзер
+            <View style={styles.restaurantTitleContainer}>
+              <Text style={styles.restaurantTitle}>
+                БургерКинг ничто - шавуха всё, особенно если с ванилла колла
               </Text>
+            </View>
+            <View style={styles.deliveryTimeContainer}>
+              <View style={styles.deliveryTimeColoredContainer}>
+                <Text style={styles.deliveryTime}>60 минут.</Text>
+              </View>
+            </View>
           </View>
-          <View style={styles.characteristicsContainer} />
+          <View style={styles.characteristicsContainer}>
+            <Text style={styles.restaurantScore}>4.6</Text>
+            <Text style={styles.minPrice}>Заказ от 990 р</Text>
+            <Text style={styles.foodType}>Бургеры</Text>
+          </View>
         </View>
       </View>
     );
@@ -32,6 +43,8 @@ const styles = StyleSheet.create({
     flex: 1,
     width: undefined,
     height: undefined,
+    borderTopLeftRadius: 6,
+    borderTopRightRadius: 6,
   },
   mainContainer: {
     backgroundColor: 'transparent',
@@ -40,6 +53,8 @@ const styles = StyleSheet.create({
     marginTop: 15,
     marginLeft: 15,
     marginRight: 15,
+    borderRadius: 6,
+    elevation: 5,
   },
   photoContainer: {
     height: 150,
@@ -49,16 +64,54 @@ const styles = StyleSheet.create({
     flex: 1,
     //height: 30,
     alignSelf: 'stretch',
-    backgroundColor: 'gold',
+    backgroundColor: 'white',
   },
   descriptionContainer: {
     alignSelf: 'stretch',
-      backgroundColor: 'white',
-      flex: 1,
+    backgroundColor: 'white',
+    flex: 1,
+    flexDirection: 'row',
   },
   characteristicsContainer: {
     height: 30,
     alignSelf: 'stretch',
-    backgroundColor: 'green',
+    backgroundColor: 'transparent',
+    borderBottomLeftRadius: 6,
+    borderBottomRightRadius: 6,
+    flexDirection: 'row',
+  },
+  restaurantTitleContainer: {
+    flex: 1,
+    backgroundColor: 'transparent',
+  },
+  deliveryTimeContainer: {},
+  restaurantTitle: {
+    fontSize: 25,
+    color: 'black',
+    margin: 10,
+  },
+  deliveryTimeColoredContainer: {
+    backgroundColor: '#00e767',
+    margin: 8,
+    padding: 4,
+    borderRadius: 6,
+  },
+  deliveryTime: {
+    fontSize: 16,
+    fontWeight: 'bold',
+      color: 'white',
+  },
+  restaurantScore: {
+    marginLeft: 12,
+    color: '#ffc400',
+    fontWeight: 'bold',
+  },
+  minPrice: {
+    marginLeft: 12,
+    color: 'gray',
+  },
+  foodType: {
+    marginLeft: 12,
+    color: 'gray',
   },
 });
