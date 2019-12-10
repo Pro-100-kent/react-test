@@ -4,6 +4,7 @@ import {Text, View, StyleSheet, Image} from 'react-native';
 export default class DeliveryListItem extends Component {
   render() {
     // console.log(this.props.listItem.photo);
+console.log(this.props.listItem.restName);
 
     return (
       <View style={styles.mainContainer}>
@@ -18,7 +19,7 @@ export default class DeliveryListItem extends Component {
           <View style={styles.descriptionContainer}>
             <View style={styles.restaurantTitleContainer}>
               <Text style={styles.restaurantTitle}>
-                БургерКинг ничто - шавуха всё, особенно если с ванилла колла
+                  {this.props.listItem.restName}
               </Text>
             </View>
             <View style={styles.deliveryTimeContainer}>
@@ -30,7 +31,9 @@ export default class DeliveryListItem extends Component {
           <View style={styles.characteristicsContainer}>
             <Text style={styles.restaurantScore}>4.6</Text>
             <Text style={styles.minPrice}>Заказ от 990 р</Text>
-            <Text style={styles.foodType}>Бургеры</Text>
+            <Text style={styles.foodType}>
+                {this.props.listItem.foodType}
+            </Text>
           </View>
         </View>
       </View>
@@ -99,7 +102,7 @@ const styles = StyleSheet.create({
   deliveryTime: {
     fontSize: 16,
     fontWeight: 'bold',
-      color: 'white',
+    color: 'white',
   },
   restaurantScore: {
     marginLeft: 12,
