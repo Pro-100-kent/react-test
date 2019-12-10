@@ -4,7 +4,7 @@ import {Text, View, StyleSheet, Image} from 'react-native';
 export default class DeliveryListItem extends Component {
   render() {
     // console.log(this.props.listItem.photo);
-console.log(this.props.listItem.restName);
+    //console.log(this.props.listItem.restName);
 
     return (
       <View style={styles.mainContainer}>
@@ -19,7 +19,7 @@ console.log(this.props.listItem.restName);
           <View style={styles.descriptionContainer}>
             <View style={styles.restaurantTitleContainer}>
               <Text style={styles.restaurantTitle}>
-                  {this.props.listItem.restName}
+                {this.props.listItem.restName}
               </Text>
             </View>
             <View style={styles.deliveryTimeContainer}>
@@ -31,9 +31,7 @@ console.log(this.props.listItem.restName);
           <View style={styles.characteristicsContainer}>
             <Text style={styles.restaurantScore}>4.6</Text>
             <Text style={styles.minPrice}>Заказ от 990 р</Text>
-            <Text style={styles.foodType}>
-                {this.props.listItem.foodType}
-            </Text>
+            <Text style={styles.foodType}>{this.props.listItem.foodType}</Text>
           </View>
         </View>
       </View>
