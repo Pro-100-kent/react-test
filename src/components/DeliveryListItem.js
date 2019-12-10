@@ -3,7 +3,7 @@ import {Text, View, StyleSheet, Image} from 'react-native';
 
 export default class DeliveryListItem extends Component {
   render() {
-    console.log(this.props.listItem.photo);
+    // console.log(this.props.listItem.photo);
 
     return (
       <View style={styles.mainContainer}>
@@ -14,7 +14,14 @@ export default class DeliveryListItem extends Component {
             resizeMode="cover"
           />
         </View>
-        <View style={styles.footerContainer} />
+        <View style={styles.footerContainer}>
+          <View style={styles.descriptionContainer}>
+              <Text>
+                Беконайзер
+              </Text>
+          </View>
+          <View style={styles.characteristicsContainer} />
+        </View>
       </View>
     );
   }
@@ -39,8 +46,19 @@ const styles = StyleSheet.create({
     alignSelf: 'stretch',
   },
   footerContainer: {
-    height: 30,
+    flex: 1,
+    //height: 30,
     alignSelf: 'stretch',
     backgroundColor: 'gold',
+  },
+  descriptionContainer: {
+    alignSelf: 'stretch',
+      backgroundColor: 'white',
+      flex: 1,
+  },
+  characteristicsContainer: {
+    height: 30,
+    alignSelf: 'stretch',
+    backgroundColor: 'green',
   },
 });
