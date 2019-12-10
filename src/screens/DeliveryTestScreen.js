@@ -4,6 +4,10 @@ import DeliveryListItem from '../components/DeliveryListItem';
 import {images} from '../assets';
 
 export default class DeliveryTestScreen extends Component {
+  static navigationOptions = {
+    title: 'Delivery Club',
+  };
+
   render() {
     const deliveryList = [
       {restName: 'МакДоналдс', foodType: 'Фастфуд', photo: images.maccoin},
@@ -23,12 +27,12 @@ export default class DeliveryTestScreen extends Component {
 
     return (
       <View style={styles.mainContainer}>
-        <View style={styles.actionsContainer}>
-          <View style={styles.photoButtonContainer} />
-          <View style={styles.titleContainer} />
-          <View style={styles.bestVideosButtonContainer} />
-          <View style={styles.sendMessageButtonContainer} />
-        </View>
+        {/*<View style={styles.actionsContainer}>*/}
+        {/*<View style={styles.photoButtonContainer} />*/}
+        {/*<View style={styles.titleContainer} />*/}
+        {/*<View style={styles.bestVideosButtonContainer} />*/}
+        {/*<View style={styles.sendMessageButtonContainer} />*/}
+        {/*</View>*/}
         <View style={styles.listContainer}>
           <FlatList
             data={deliveryList}
